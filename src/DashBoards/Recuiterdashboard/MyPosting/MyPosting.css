@@ -1,0 +1,148 @@
+.my-postings-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  background-color: #f9f9f9;
+}
+
+.my-posting-card {
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out;
+}
+
+.my-posting-card:hover {
+  transform: scale(1.03);
+}
+
+.my-posting-image {
+  width: 100%;
+  height: 360px; /* Keep it tall enough to show poster */
+  object-fit: cover; /* Ensures full image is visible and fills card */
+  border-bottom: 1px solid #ddd;
+}
+
+.my-posting-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  color: #333;
+}
+
+.my-posting-rating {
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #f39c12;
+}
+
+.my-posting-buttons {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.edit-button,
+.delete-button {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.delete-button {
+  background-color: #e74c3c;
+}
+
+.edit-button:hover {
+  background-color: #2980b9;
+}
+
+.delete-button:hover {
+  background-color: #c0392b;
+}
+
+.my-posting-card p {
+  padding: 0 10px;
+  color: #555;
+  font-size: 14px;
+}
+/* Mobile (up to 767px) */
+@media screen and (max-width: 767px) {
+  .my-postings-container {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .my-posting-card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .my-posting-image {
+    height: 240px;
+  }
+
+  .my-posting-title {
+    font-size: 16px;
+  }
+
+  .my-posting-rating {
+    font-size: 14px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .my-posting-card p {
+    font-size: 13px;
+  }
+}
+
+/* Tablet (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .my-postings-container {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .my-posting-card {
+    width: 45%;
+  }
+
+  .my-posting-image {
+    height: 300px;
+  }
+
+  .my-posting-title {
+    font-size: 17px;
+  }
+
+  .my-posting-rating {
+    font-size: 15px;
+  }
+
+  .edit-button,
+  .delete-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .my-posting-card p {
+    font-size: 13.5px;
+  }
+}

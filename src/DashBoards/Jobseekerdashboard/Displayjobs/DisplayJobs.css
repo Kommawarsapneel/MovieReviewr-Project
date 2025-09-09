@@ -1,0 +1,260 @@
+.job-grid {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.job-card {
+  background-color: #131212;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.job-card:hover {
+  transform: scale(1.02);
+}
+
+.job-image {
+  width: 100%;
+  height: 300px; /* You can adjust this */
+  object-fit: cover; /* Ensures image covers full space */
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.job-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 12px 16px 4px;
+  color: #f8f7f7;
+}
+
+.job-rating {
+  margin: 0 16px 8px;
+  color: #ff9900;
+  font-size: 1rem;
+}
+
+.rating-label {
+  color: #faf7f7;
+  font-weight: 500;
+}
+
+.rating-stars {
+  font-size: 1.1rem;
+}
+
+.job-card p {
+  margin: 4px 16px;
+  font-size: 0.95rem;
+  color: #f0eeee;
+}
+
+
+.like-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: #0077ff;
+  margin-top: 10px;
+}
+
+.like-button:hover {
+  opacity: 0.8;
+}
+/* Tablet (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .job-card {
+    width: 100%;
+  }
+}
+.share-wrapper {
+  position: relative;
+  margin-top: 8px;
+}
+
+.share-main-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.share-menu {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 6px;
+  padding: 8px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.share-menu button,
+.share-menu > * {
+  padding: 6px;
+  background: none;
+  border: none;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.copy-link-btn:hover,
+.share-menu > *:hover {
+  background-color: #f0f0f0;
+}
+.job-actions {
+  display: flex;
+  align-items: center;
+ padding-left: 2px;
+  gap: 12px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.like-button,
+.share-main-btn {
+  padding: 6px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 6px;
+  background-color: #0e0e0e;
+  transition: background-color 0.2s ease;
+}
+
+.like-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.like-button:hover:not(:disabled),
+.share-main-btn:hover {
+  background-color: #dcdcdc;
+}
+
+.share-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 8px;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 0.1);
+}
+
+/* .share-menu > * {
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  background-color: #eee;
+  text-align: center;
+  user-select: none;
+}
+
+.share-menu > *:hover {
+  background-color: #ccc;
+}
+
+.copy-link-btn {
+  border: none;
+  background: none;
+  font-weight: 600;
+  color: #444;
+  padding: 6px 0;
+} */ */
+
+/* .share-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.share-icon-button:hover {
+  background-color: #f0f0f0;
+} */
+.share-menu-vertical {
+  display: gird;
+  grid-template-columns: auto auto auto;
+  gap: 8px; /* space between icons */
+}
+
+
+.share-icon-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: gird;
+ grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  border-radius: 6px;
+}
+
+.share-icon-button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Mobile (max-width: 767px) */
+@media screen and (max-width: 767px) {
+  .job-grid {
+    grid-template-columns: auto auto ;
+    gap: 12px;
+    padding: 10px;
+    /* margin: 0 100px; */
+  }
+
+  .job-card {
+    width: 100%;
+  }
+
+  .job-image {
+    height: 300px;
+    
+  }
+
+  .job-title {
+    font-size: 1rem;
+  }
+
+  .job-rating, .rating-stars {
+    font-size: 0.9rem;
+  }
+
+  .like-button {
+    font-size: 0.9rem;
+  }
+}

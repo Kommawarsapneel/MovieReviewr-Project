@@ -1,0 +1,61 @@
+/* Container flex */
+.recruiter_dashbaord {
+  display: flex;
+  gap: 25px;
+  min-height: 90vh;
+  background-color: #f8f9fa; /* light background for contrast */
+}
+
+/* Sidebar styles */
+.sidebar {
+  background-color: #87ceeb; /* nicer skyblue */
+  height: 90vh;
+  padding: 2rem;
+  width: 20%;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  border-radius: 8px;
+}
+
+/* Main content takes remaining width */
+.main {
+  flex-grow: 1;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 0 15px rgba(0,0,0,0.05);
+  min-height: 90vh;
+  overflow-y: auto;
+}
+
+/* Responsive for tablets */
+@media (max-width: 992px) {
+  .recruiter_dashbaord {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+  }
+
+  .main {
+    width: 100%;
+    min-height: auto;
+    border-radius: 0 0 8px 8px;
+    padding: 1.5rem;
+  }
+}
+
+/* Responsive for mobile */
+@media (max-width: 576px) {
+  .sidebar {
+    padding: 1rem;
+  }
+
+  .main {
+    padding: 1rem;
+  }
+}

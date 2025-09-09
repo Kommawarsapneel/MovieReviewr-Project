@@ -1,0 +1,44 @@
+.star-rating {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.star-rating .star {
+  cursor: pointer;
+  transition: color 0.2s;
+  margin-right: 5px;
+  color: #e4e5e9;
+}
+
+.star-rating .star.selected {
+  color: #ffc107;
+}
+
+.star-rating .star.hovered {
+  color: #ffc107;
+  opacity: 0.7;
+}
+/* Mobile (up to 767px) */
+@media screen and (max-width: 767px) {
+  .star-rating {
+    margin: 8px 0;
+  }
+
+  .star-rating .star {
+    font-size: 20px;
+    margin-right: 4px;
+  }
+}
+
+/* Tablet (768px to 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .star-rating {
+    margin: 10px 0;
+  }
+
+  .star-rating .star {
+    font-size: 22px;
+    margin-right: 5px;
+  }
+}
